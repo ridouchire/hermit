@@ -10,6 +10,9 @@ INSTALL_FOLDER=/usr/share/fonts/OTF/
 
 install:
 	mkdir -p $(INSTALL_FOLDER)
+	convertfont $(PROJECT)-bold.sfd $(PROJECT)-bold.otf
+	convertfont $(PROJECT)-medium.sfd $(PROJECT)-medium.otf
+	convertfont $(PROJECT)-light.sfd $(PROJECT)-light.otf
 	cp $(PROJECT)*.otf $(INSTALL_FOLDER)
 	fc-cache -frv
 
